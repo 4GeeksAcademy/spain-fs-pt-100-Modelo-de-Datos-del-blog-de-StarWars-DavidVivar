@@ -50,7 +50,7 @@ def get_characters():
     results = list(map(lambda c: c.serialize(), characters))
     return jsonify(results), 200
 
-@app.route('/characters', methods=['POST'])
+@app.route('/characters', methods=['POST']) 
 def create_character():
     data = request.get_json()
     new_character = Character(
